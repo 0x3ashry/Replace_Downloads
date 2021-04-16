@@ -6,6 +6,6 @@ It is used by replacing the program downloaded by the target with your program l
 You must have Netfilterqueue library installed in your machine
 
 ## Usage
-`sudo python3 Net_Cut.py`
+`sudo python3 Replace_Downloads.py`
 
 You must edit the download link in line 21 instead of "http://www.example.org/evil.exe" and put your program link instead
