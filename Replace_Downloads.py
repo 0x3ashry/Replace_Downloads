@@ -10,7 +10,7 @@ def process_packet(packet):
     scapy_packet = scapy.IP(packet.get_payload())  # We converted it to scapy to allow us to access it's layers as the normal DNS packet is only string not layers
     if scapy_packet.haslayer(scapy.Raw):  # DNSRR stands for DNS Resource Record which is a DNS response
         if scapy_packet[scapy.TCP].dport == 80:  # dport --> destination port means that the packet is going to an http so it is a request
-            if b".exe" in scapy_packet[scapy.Raw].load:
+            if b".exe" in scapy_packet[scapy.Raw].load and b"example.org" not in scapy_packet[scapy.Raw].load:
                 print("[+] exe Request")
                 ack_list.append(scapy_packet[scapy.TCP].ack)
 
