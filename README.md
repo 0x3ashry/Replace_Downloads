@@ -8,4 +8,5 @@ You must have Netfilterqueue library installed in your machine
 ## Usage
 `sudo python3 Replace_Downloads.py`
 
+You must replace "example.org" in line 13 with your server domain name in your download link
 You must edit the download link in line 21 instead of "http://www.example.org/evil.exe" and put your program link instead
